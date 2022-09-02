@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return(
     <ThemeProvider theme={theme(defineTheme)}>
       <GlobalStyle />
-      <Header theme={defineTheme} setTheme={setDefineTheme} />
+     
       <Component {...pageProps} />
     </ThemeProvider>
   )
