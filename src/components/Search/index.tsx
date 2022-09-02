@@ -6,7 +6,7 @@ import { StyledSearch } from "./style";
 export default function Search() {
 
     const router = useRouter()
-    const value = router.query.search as string
+    const value = router.query?.search as string
     const [search, setSearch] = useState<string>("")
 
     const action = () => {
