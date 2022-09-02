@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [defineTheme, setDefineTheme] = useState<boolean>(false)
 
   return(
-    <ThemeProvider theme={theme(false)}>
+    <ThemeProvider theme={theme(defineTheme)}>
       <GlobalStyle />
-     
+      <Header theme={defineTheme} setTheme={setDefineTheme} />
       <Component {...pageProps} />
     </ThemeProvider>
   )
