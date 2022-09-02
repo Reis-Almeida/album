@@ -8,21 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [defineTheme, setDefineTheme] = useState<boolean>(false)
 
-  useEffect(() => {
-    setDefineTheme(() => {
-      const dark = JSON.parse(localStorage.getItem("Dark") || "")
-  
-      if(dark) {
-        return true
-      }else {
-        return false
-      }
-  
-    })
-  }, [setDefineTheme])
-
   return(
-    <ThemeProvider theme={theme(defineTheme)}>
+    <ThemeProvider theme={theme(false)}>
       <GlobalStyle />
      
       <Component {...pageProps} />
