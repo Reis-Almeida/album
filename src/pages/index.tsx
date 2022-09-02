@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         {images.map((data:DatabaseProps) => (
           <Link href={`/details/${data.id}`} key={`image${data.id}`}>
             <a>
-              <Image src={data.image} objectFit="cover" layout="fill" alt="imagem do assunto" />
+              <Image src={data.image} objectFit="cover" layout="fill" alt="imagem do assunto" priority />
             </a>
           </Link>
         ))}
