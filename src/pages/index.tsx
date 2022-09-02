@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <Head>
           <title>Home - Album do Conhecimento</title>
       </Head>
-      <Search />
+       {/* <Search /> */}
       <div className="album">
         {images.map((data:DatabaseProps) => (
           <Link href={`/details/${data.id}`} key={`image${data.id}`}>
