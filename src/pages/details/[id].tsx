@@ -18,13 +18,16 @@ const Details: NextPage = () => {
     const query:number = parseInt(useRouter().query.id as string, 10)
     const last:number = Database.length
 
-    useEffect(() => {
+     useEffect(() => {
+        if(data !== null) {
+            setData(null)
+        }
         if(query != undefined) {
             setTimeout(() => {
                 setData(Database[query - 1])
-            }, 2000)
+            }, 1000)
         }
-    })
+    }, [query])
 
 
     if(!data) {
